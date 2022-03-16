@@ -1,0 +1,151 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TableroCovidEdge" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_tabCarnet" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1230,2418</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>TableroCovidEdge_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="TableroCovidEdge" sap:VirtualizedContainerService.HintSize="476,2353" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: COVID19 en Guatemala" sap:VirtualizedContainerService.HintSize="434,2261" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="2456b3ac-025d-46c2-9b2e-e144bde55b7a" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,2044" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Delay DisplayName="Delay 15S" Duration="00:00:15" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_6" />
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][d(ctrl)]r[u(ctrl)][u(hk)]" />
+            <Delay DisplayName="Delay 80S" Duration="00:01:20" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'Vacunación'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://gtmvigilanciacovid.shinyapps.io/1GEAxasgYEyITt3Y2GrQqQFEDKW89fl9/" DesignTimeRectangle="8, 839, 230, 44" ElementType="Text" FriendlyName="'Vacunación'" FullSelectorArgument="&lt;webctrl id='clpdi14l0' tag='IFRAME' /&gt;&lt;webctrl aaname='                                      Vacunación                *' parentid='sidebarItemExpanded' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clpdi14l0' tag='IFRAME' /&gt;&lt;webctrl aaname='                                      Vacunación                *' parentid='sidebarItemExpanded' tag='A' type='' check:text='Vacunación' /&gt;" Guid="b1aa076d-7856-475a-8761-fa640fae0718" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOoAAAAwCAYAAAAfMeYHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATnSURBVHhe7dmxSyNZAMfxy18xZcBCWDBd0hk4cLqAxYYtJFdIEJZgYbhGcoXkQMIVO1gcY5eAMMLBpFliERhBiCCMxcIUFgMWAxY2V1yz9e/em8yYyThyZk3Ul/stfMA4k8mLvO++l8lPSPy7v78nonfk73++hxgq0TvGUIkUwFCJFMBQiRTAUIkUwFCJFMBQiRTAUIkUwFCJFMBQiRTAUIkUwFCJFMBQiRTAUIkUwFCJFPA+Qg2C7N8TUeiNQg3g9Gy44c8+7L0yqsdu6hwiir1JqN6fFeRyOeS3umGsfr+JkpZnrP/BvxjAvc0+dn8XwPd9BFnHSHlvs6IGPgb7pXGsGzrKnwyMfBf2kQ0v6/y0Owedjw1YNxnHIs4fFTRO/MxjahqhU9RQP814T7cjGL9U0Rku0/ulpFcP1T2po1RswvYSsUYra9b5T3GPdOhHT6zAgY3miniNIOPY0hF/xyMTjp91jJbF64Z60YEuwpRx5lKxlnas2WK96aK21sIgI0bvuDIVcXDtwO7bsM9G8DPjDeCdi+PinMFlclUSvx868NLPCTw4Q2+yzbwZwQ6fJ7afl4OM60zMfSzitQfyev3sY88dF71vrxaqe9KGce7DPa5Cy4pVq8K8yn5utkA8r4BaLz3xHLTXaujKbfHtAK2NEqq7BrpiknYPayiviNe5Tpx/baG+XkbtwITV78LYraC0ZcINJ70Hc7MC81vifOmbicqmOdmmn7WQ22mj/VFHXV6nZ6CxmQ93Cg/nzH0sAZzfdaxuNmD0bFjHbdTEx4jGSWKX8ZxxkRJeJ1S5+mkiTE1H+7SLxloUqhROeB+e9wNf0VwZ0DeMqZU46DeR37Oj1S5AkLr5EpzWof3mRI9F1EUx+ZOxCO5wAO9O/jxDqLn0dXx0tzS0zuLH8x2LLz9C/DqYvnkk/zMo6jDi//CeNS5SwcJD9f9qovFFbPOuTVRlrHGg4Yoqtq5P3cV8FjnpCmifJx8nJmosuiMaujAmkZ23UdiNo84yQ6jbFvzkOYLcgleOvanfzWcsPqzt8uP3KcjXLH+JVtVZxkXv2mJDlStpGKWG6qGBZnGekY4FYjIWxFYunIxyssc/h1xYn3Xo2020D8QWUNqrohDHISfy/mDqetNmCDXjOtNBzHMsT4xL+tqcXOdZ4yIVLDZUGU4cZoK2Pp9Ix1wY4rOZcRXA3suj2U9soYctaGJ7OHW+WNkfIpPBpbbO06IgUtvR8H3NGuq8xhLFOdhPvdeIc1BAPf5aiqEujcWGKiffQiMd83s1FD43UEtPdBnHjpXYTkY3rh4ikzekyqjKrXl8zp0H66AFyxs/ll8DlcRknxx3YW7lof1IqC8aS2oVlR8l1psP45T8YRu6+Ps68d1fhro0FhpqILZhpRUxqaNI85sdOHOONCS/NxWffx/fAQ7gHFZRXi+j/LNUh3Hamd62ymAOqlj9UArPWf2go9FLfj8rj1eQX5HHSyhtNGB9TayE0rOCeOlYHm93g0sTjY1VrMprFsXYtsTfN/l9KkNdGgsLVX52LH8y4YZ3LInoJRYUqtiyHZoYLWL1JPofWtiKSkTzw1CJFMBQiRTAUIkUwFCJFMBQiRTAUIkUwFCJFMBQiRTAUIkUwFCJFMBQiRTAUIkUwFCJFMBQiRTAUIkUwFCJFDAO9Tv+BWXMszvsTGezAAAAAElFTkSuQmCC" InformativeScreenshot="b7e0e1bb5bf88b09e93992861947c94a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='COVID19 en Guatemala' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay DisplayName="Delay 15S" Duration="00:00:15" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)d(shift)]p[u(shift)u(ctrl)][u(hk)]" />
+            <Delay DisplayName="Delay 5S" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_5" />
+            <uix:NClick ClickType="Single" DisplayName="Click '&amp;Print'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2456b3ac-025d-46c2-9b2e-e144bde55b7a" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="218, 387, 75, 23" ElementType="Button" FriendlyName="'&amp;Print'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Print' /&gt;" FuzzyAccuracy="0.82" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Print' check:text='&amp;amp;Print' /&gt;" Guid="1fe2806e-e3a8-45da-b875-3d10775a005f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADpSURBVGhD7dXBDYQgEIVheqIbmqEVGrAISqEDOphVUTJkYYlO1sxu3uE/MOLli4jJORO6F/AEAU9Qg7csC5rEvd7wUkpoEPAEAU8Q8AQBT5AOvOjJGkOmZsmFzj5l6cGznuJoPZrxZs+/kE68FMgZR4HvmQW8so7BlfU+d+ScLceZzfw52494JG+PI/8goB68+r/bAFaceM4t+RWnAh+zDWx/t4F+Dm5L5ZfXnXM8vnc0fyDgCQKeoP/BW2/ocmlcvKUF6cD70VTg1Vu2U2+/lvDlCQKeIOAJmuKhz3GvBg9dC3iCgHe7TC/srp3ujX9grAAAAABJRU5ErkJggg==" InformativeScreenshot="dfa5dba230f8cfe8df6d81193779819a.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Print' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay DisplayName="Delay 7S" Duration="00:00:07" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'IA_Practica1_docs (pinn…'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2456b3ac-025d-46c2-9b2e-e144bde55b7a">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="59, 288, 98, 24" FriendlyName="'IA_Practica1_docs (pinn…'" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Control Host' cls='NamespaceTreeControl' title='Namespace Tree Control' /&gt;&lt;wnd ctrlid='100' title='Tree View' /&gt;&lt;ctrl name='IA_Practica1_docs (pinned)' role='outline item' /&gt;" FuzzyAccuracy="0.93" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Control Host' cls='NamespaceTreeControl' title='Namespace Tree Control' /&gt;&lt;wnd ctrlid='100' title='Tree View' /&gt;&lt;ctrl name='IA_Practica1_docs (pinned)' role='outline item' automationid='' check:text='IA_Practica1_docs (pinned)' /&gt;" Guid="840730b2-35a3-475d-abbe-9bd1514f2e61" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAAcCAYAAACTZsrFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIQSURBVGhD7ZaLbYQwDIa7BhuxDtNkF3ZhljS2E7Adk6AeJ7mSXX26Iw+//pDrz7IsOfBHCOOUEMYpIYxTQhinhDBOCWGcEsI4JYRxiiHMlvfyt6nxbc8575sYs4H93I6cVmvdC6ypeP/QPxXW1TsGavxiXYVnwkADjjJ6PElGJr2mo2iT8tqt+wtvNmTNkFreodp/Kgw090jr+SnXa3TSbxbxjYb09c75Rh6SB8LAyapJ4JszO/06af5M3/cdjyrGwJukmbgq64mutm+wlxmu1bH0Hhq/jwGAjwfC4LVJdqQk47I5sBaXsHKy8+TMhRFiMJHO9RrZLHmVUXPtt47vo8T7ddL3sz0cvb+NzYSBNVcDsabTj5wjkSY5wUmZ/F5PhdHXFyY1dEqJXsaLhjnVGHGc6xwWZzVL72fPt3sKVoxzXtZrIg4nMI5LfbfnEBwfH6KJMPDdslEhLOnZnEicvY13BXW+2fOwCUaMcw34GNVTAB9vClOhN6+uVXNjYSBC95tCr6fljNDNG8xx/1hEm7u7lrRv/jy4NswYDVbvLbDmqnl+lTV/d3Vc6BupMRSGauo3ja8z3qzZHCWO1v07TgU3a4VDTnWgrpntGcVoe2bCFM7A0JPRj7/l/zLMifkqI2ZsQ5jAAx8II08C2YOT5xo/NcUb45QQxikhjFNCGKeEME4JYZwSwjglhHHJkn8BmK/MDi5iUuQAAAAASUVORK5CYII=" InformativeScreenshot="0bde121beb6e1cb967417fd92c9b4063.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save Print Output As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Edit'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="2456b3ac-025d-46c2-9b2e-e144bde55b7a" Text="[in_tabCarnet]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="136, 939, 1751, 17" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="17aa6f48-cddb-48ab-b0df-a6e23b1c3a1a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABtsAAAAVCAYAAAAn1FHHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADmSURBVHhe7dmxDYAwEMBAxvr9m4wVakQkhOsrrvEKvmZmAwAAAAAAAP+ZbQAAAAAAABAdZ9ta69UAAAAAAACAJ7MNAAAAAAAAIrMNAAAAAAAAIrMNAAAAAAAAIrMNAAAAAAAAIrMNAAAAAAAAIrMNAAAAAAAAIrMNAAAAAAAAIrMNAAAAAAAAIrMNAAAAAAAAIrMNAAAAAAAAIrMNAAAAAAAAIrMNAAAAAAAAIrMNAAAAAAAAIrMNAAAAAAAAouNsAwAAAAAAAL6ZbQAAAAAAABCZbQAAAAAAABCZbQAAAAAAAJDMvgGQhAg3Z/53ygAAAABJRU5ErkJggg==" InformativeScreenshot="de8e76118a5d793acd8438e4d1fbf43a.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save Print Output As' /&gt;" SearchSteps="Selector, Image">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="TopRight" X="-857" Y="9" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="747, 493, 88, 26" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='unchecked' /&gt;" Guid="49e90062-c5f4-48ab-a93b-3efa749c9e3e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAeCAYAAAChf3k/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFKSURBVGhD7ZbRsYMgEEVfUf5YC81QCq2kFDqwA95eEEQl+YrrOrl35kwwS2Yyh3X1b57nRPSgcGWa8GVZyIUMhTPX5KPwaZrIF0EoXBGEwhVBKFwRhMIVQShcEcSucP/K/6Hklfxoz8NAbAp3IcVeslwH39UfCmJTOLo7huRGtQeD2BQ+eelvOHen2n7SePnOpRCx7Pb1B5bvlpp7RxNiVDgoIpGdzAYOJabgZA3BWX6plcvDHtSkMDpELRDDwlfWDm3Sdy1eZUJs7V5ZD7t7TXcw2iD2hQuuzIzDwxR3wNa92IPurZ/5t7v994PYFO7lraSOgXW0ZImn2dyNC1xH6XNhE/z+WXAHiNEOL6Ja2hjY5nrKcjvhtXYcGcexwpHyOyAUrghC4YogFK4IQuGKIBSuCELhiiAfhTPfz1vh5DpOwokOFK7KnP4BNjLz41qPLgEAAAAASUVORK5CYII=" InformativeScreenshot="4f3bc4ee02c84cec05814d10848fa8a2.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save Print Output As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click '&amp;Yes'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="211, 95, 68, 23" ElementType="Button" FriendlyName="'&amp;Yes'" FullSelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' check:text='&amp;amp;Yes' /&gt;" Guid="3c4b34e0-85c9-47ed-9f35-af90486e0660" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAbCAYAAADf98keAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADzSURBVFhH7ZTBEYQgDEXTE93QTFqhAYugFDuggyyg7oCM5rJumPEf3sFMLr55gVJKAq6BIAUIUugELcsCMq2TQdC6rq8GghQgSAGCFCBIwVRQ8CSOYz8PXsiHfmaIbUGRxZGX8J1FYeeEY7NjjK2gTFfRZPUUzAXVihxLrPWQ+NDMiYQqR2XbzjZrdh/EXlCmVOT5EFVmQTw1p5bLqpUZFDaFoPrjbRFdPTtFzD4fHvYHmUPQuZjh8e6J7N51YoOg+n1fSpH0j5ImFZQ5n1k5sf0UN64L+yWTCJoXCFKAIAUIUoAgBVUQuBEERiBIAYJuSfIBP2ojgeJbwWYAAAAASUVORK5CYII=" InformativeScreenshot="f1fa32e3c7a924b3c463816a4c270ee4.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Confirm Save As' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="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" InformativeScreenshot="9e175cd5380caca9ac5b9a6670736ff9.png" Selector="&lt;html app='msedge.exe' title='COVID19 en Guatemala'/&gt;" Url="https://tablerocovid.mspas.gob.gt/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

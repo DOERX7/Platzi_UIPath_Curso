@@ -1,0 +1,70 @@
+{
+  "name": "CursoRPA_Platzi",
+  "description": "Este proyecto contiene todas las clases vistas en el curso de RPA ",
+  "main": "IA_Practica1\\MAIN_IA_Practica1.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.11.4]",
+    "UiPath.Mail.Activities": "[1.12.3]",
+    "UiPath.System.Activities": "[21.10.4]",
+    "UiPath.UIAutomation.Activities": "[21.10.5]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "21.10.5.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "76292186-7df7-4d52-ac1a-c5b34c0eed24",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "IA_Practica1\\MAIN_IA_Practica1.xaml",
+      "uniqueId": "3fb94f85-8887-4bf3-b84c-c848a26a9b1d",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "IA_Practica1\\MAIN2_TestTableroYCorreo.xaml",
+      "uniqueId": "aefbe616-4c14-4137-9e15-4d9c2b1240af",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}
